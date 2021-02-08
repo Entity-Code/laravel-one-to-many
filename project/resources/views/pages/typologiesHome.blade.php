@@ -13,6 +13,12 @@
                 <a href="{{route('typology-show', $typology -> id)}}">
                     {{$typology -> name}}
                 </a>
+
+                <br>
+
+                <a href="{{route('typology-edit', $typology -> id)}}">EDIT</a>
+                <a href="{{route('typology-delete', $typology -> id )}}">DELETE</a>
+
             </li>
             
             <br>

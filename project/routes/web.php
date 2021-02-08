@@ -40,3 +40,11 @@ Route::get('/create/typology', 'TypologyController@create')
     -> name('typology-create');
 Route::post('/store/typology', 'TypologyController@store')
     -> name('typology-store');
+
+Route::get('/edit/typology/{id}', 'TypologyController@edit')
+    -> name('typology-edit');
+Route::post('/update/typology/{id}', 'TypologyController@update')
+    -> name('typology-update');
+
+Route::get('/delete/typology/{id}', 'TypologyController@delete')
+    -> name('typology-delete');

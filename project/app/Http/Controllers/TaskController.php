@@ -51,7 +51,7 @@ class TaskController extends Controller
     //edit
     public function edit($id) {
         
-        $employees = Employee::all(); 
+        $employees = Employee::all();
         $typologies = Typology::all();
 
         $task = Task::findOrFail($id);

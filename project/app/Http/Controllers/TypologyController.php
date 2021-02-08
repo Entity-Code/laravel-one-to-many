@@ -21,15 +21,34 @@ class TypologyController extends Controller
     }
 
     public function create() {
-
-        $employees = Employee::all();
-        $tasks = Task::all();
-
-        return view('pages.typologyCreate', compact('employees', 'tasks'));        
+        return view('pages.typologyCreate');        
     }
 
     public function store(Request $request) {
-        $data = $request -> all();
-        dd($data);
+
+        $typology = Typology::create($request -> all());
+
+        return redirect() -> route('typology-index'); 
     }
+
+    public function edit($id) {
+        $typology = Typology::findOrFail($id);
+        return view('pages.typologyEdit', compact('typology'));
+    }
+
+    
+    public function update(Request $request, $id) {
+        $typology = Typology::findOrFail($id);
+        $typology -> update($request -> all());
+     
+        return redirect() -> route('typology-index');
+    }
+
+    public function delete($id) {
+        $typology = Typology::findOrFail($id);
+        $typology -> delete();
+
+        return redirect() -> route('typology-index');
+    }
+    
 }
