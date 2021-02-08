@@ -10,6 +10,6 @@ $factory->define(Task::class, function (Faker $faker) {
         'title' => $faker -> unique() -> jobTitle(),
         'description' => $faker -> sentence(),  
         'priority' => rand(1,5) 
-    ]; 
+    ];  
 });
  

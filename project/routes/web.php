@@ -33,7 +33,4 @@ Route::get('/typologies', 'TypologyController@index')
     -> name('typology-index');
 
 Route::get('/typologies/{id}', 'TypologyController@show')
-    -> name('typology-show');
-
-//Route::get('/typologies/delete', 'TypologyController@delete')
-    //-> name('typology-delete'); 
+    -> name('typology-show'); 

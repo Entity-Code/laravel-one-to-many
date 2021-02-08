@@ -11,8 +11,8 @@ class Typology extends Model
         'description'
     ];
 
-    public function employees() {
-        return $this -> belongsToMany(Employee::class); 
+    public function tasks() {
+        return $this -> belongsToMany(Task::class); 
     }
 
 

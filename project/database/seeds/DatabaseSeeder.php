@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
             //va inserito prima l'elemento non referenziato (one)
             EmployeeSeeder::class, 
             TaskSeeder::class,
-            TypologySeeder::class
+            TypologySeeder::class 
         ]);
     }
 }

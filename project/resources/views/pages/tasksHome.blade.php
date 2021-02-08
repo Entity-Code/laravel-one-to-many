@@ -8,10 +8,10 @@
     <a href="{{route('task-create')}}">CREATE NEW TASK</a>
     
     <ul>
-        @foreach ($tasks as $task)
+        @foreach ($tasks as $task) 
             <li>
                 <a href="{{route('task-show', $task -> id)}}">
-                    {{$task -> title}}
+                    {{$task -> title}} 
                 </a>
 
                 <br>
@@ -21,7 +21,7 @@
                 </a>
 
                 <a href="#">
-                    DELETE
+                    DELETE 
                 </a>
             </li>
         @endforeach

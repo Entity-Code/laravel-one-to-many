@@ -21,7 +21,7 @@ class TaskSeeder extends Seeder
             $emp = Employee::inRandomOrder() -> first(); //salvo un elemento random employee
             $task -> employee() -> associate($emp); //associo l'employee random ad un task iesimo
             $task -> save(); //salvo nel database
-        });
+        }); 
     }
 }
 

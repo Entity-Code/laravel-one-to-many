@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Task;
 use App\Employee;
 
-class TaskController extends Controller
+class TaskController extends Controller 
 {   
     //index
     public function index() {
@@ -29,7 +29,9 @@ class TaskController extends Controller
         $newTask = Task::make($request -> all());
         $employee = Employee::findOrFail($request -> get('employee_id'));
         $newTask -> employee() -> associate($employee);
-        $newTask -> save(); 
+        $newTask -> save();
+
+        return redirect() -> route('tasks-index');
     }
 
     //edit

@@ -6,12 +6,14 @@
     <h1>Employees Home</h1> 
 
     <ul>
-        @foreach ($employees as $employee)
+        @foreach ($employees as $employee) 
             <li>
                 <a href="{{route('emp-show', $employee -> id)}}">
                     {{$employee -> name}}
                     {{$employee -> lastname}}
                 </a>
+
+                <h5>TASKS:</h5>
                 <ul>
                     @foreach ($employee -> tasks as $task)
                         <li>
@@ -23,7 +25,7 @@
             </li>
         @endforeach
     </ul>
-    ù
+     
 
  
 

@@ -17,7 +17,7 @@ class CreateTypologiesTable extends Migration
             $table -> id();
 
             $table -> string('name', 50) -> unique(); 
-            $table -> string('description', 100); 
+            $table -> text('description'); 
 
             $table -> timestamps();
         });

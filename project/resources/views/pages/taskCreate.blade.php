@@ -22,22 +22,26 @@
         <br>
 
         <label for="priority">Priority:</label>
-        <input name="priority" type="text">
+        <input name="priority" type="text"> 
 
         <br>
 
         <label for="employee_id">Employee:</label>
+
         <select name="employee_id">
             @foreach ($employees as $employee)
-                <option value="{{$employee -> id}}">{{ $employee -> name }}</option>
-            @endforeach
-            
 
+                <option value="{{$employee -> id}}">
+                    {{ $employee -> name }}
+                    {{ $employee -> lastname }}  
+                </option>
+
+            @endforeach  
         </select>
 
         <br>
 
-        <input type="submit" value="SAVE">
+        
 
     </form>
 
