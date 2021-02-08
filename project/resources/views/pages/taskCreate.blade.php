@@ -42,6 +42,22 @@
         <br>
 
         
+        <label for="typologies[]">Typologies:</label> <br>
+        {{-- mi ritorno un array di typologies (quelle selezionate dall'utente), per poi lavorarmelo nel controller (vedere in store) --}}
+            @foreach ($typologies as $typology)
+                <input name="typologies[]" 
+                type="checkbox" 
+                value="{{$typology -> id}}"> 
+
+                    {{ $typology -> name}} 
+                    
+                <br>
+            @endforeach
+        
+        <br><br>
+        
+        <input type="submit" value="SAVE"><br>
+        
 
     </form>
 

@@ -14,7 +14,7 @@ class TaskSeeder extends Seeder
     public function run() 
     {
         //una specie di foreach
-        factory(Task::class, 50)
+        factory(Task::class, 20)
             -> make() //le creo senza buttarle in tabella
             -> each(function($task){ //prendo ogni elemento con l'each
             //dd($task);

@@ -25,12 +25,18 @@ Route::post('/store/task', 'TaskController@store')
 
 Route::get('edit/{id}', 'TaskController@edit')
     -> name('task-edit');  
+Route::post('update/{id}', 'TaskController@update')
+    ->name('task-update');
 
 
-
-//TYPOLOGIES
+//TYPOLOGIES 
 Route::get('/typologies', 'TypologyController@index')
     -> name('typology-index');
 
 Route::get('/typologies/{id}', 'TypologyController@show')
-    -> name('typology-show'); 
+    -> name('typology-show');
+
+Route::get('/create/typology', 'TypologyController@create')
+    -> name('typology-create');
+Route::post('/store/typology', 'TypologyController@store')
+    -> name('typology-store');
