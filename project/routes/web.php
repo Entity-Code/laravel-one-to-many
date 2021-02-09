@@ -47,4 +47,4 @@ Route::post('/update/typology/{id}', 'TypologyController@update')
     -> name('typology-update');
 
 Route::get('/delete/typology/{id}', 'TypologyController@delete')
-    -> name('typology-delete');
+    -> name('typology-delete'); 

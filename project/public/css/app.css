@@ -82,3 +82,25 @@ footer ul li {
   line-height: 1.5em;
 }
 
+#error {
+  max-width: 400px;
+  min-width: 200px;
+  background-color: #ff7a7a;
+  padding: 10px 50px;
+  border: 5px solid red;
+  color: black;
+  font-size: 25px;
+  list-style-type: none;
+  text-align: center;
+}
+
+#error h1 {
+  display: inline-block;
+  text-align: center;
+  border: 2px solid red;
+  color: red;
+  padding: 5px 25px;
+  border-radius: 50%;
+  background-color: #ff7777;
+}
+
