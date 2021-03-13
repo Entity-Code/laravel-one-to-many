@@ -25,7 +25,7 @@ class TypologyController extends Controller
         return view('pages.typologyCreate', compact('tasks'));        
     }
 
-    public function store(Request $request) {
+    public function store(Request $request) { 
         $data = $request -> all(); 
 
         //validazione update
